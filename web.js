@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var buffer = 'Hellow world 2';
+    var buffer = fs.readFileSync('index.html', encoding = 'utf8');
     response.send(buffer.toString(encoding = 'utf8'));
 });
 

@@ -4,6 +4,8 @@ var app = express.createServer(express.logger());
 
 var string = new Buffer(8);
 
+string.write("Hello there", "utf8");
+
 app.get('/', function(request, response) {
     response.send(string);
 });
